@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Appointment System{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto text-center">
+        <h1 class="display-4 mb-4">Welcome to the Appointment System</h1>
+        <p class="lead mb-4">Manage your medical appointments efficiently and effectively.</p>
+        
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card appointment-card mb-4">
+                    <div class="card-body">
+                        <i class="bi bi-calendar-plus display-4 text-primary mb-3"></i>
+                        <h5 class="card-title">Schedule Appointment</h5>
+                        <p class="card-text">Book a new appointment with your doctor.</p>
+                        <a href="{{ url_for('new_appointment') }}" class="btn btn-primary">New Appointment</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card appointment-card mb-4">
+                    <div class="card-body">
+                        <i class="bi bi-calendar-check display-4 text-success mb-3"></i>
+                        <h5 class="card-title">View Appointments</h5>
+                        <p class="card-text">Check your upcoming appointments.</p>
+                        <a href="{{ url_for('appointments') }}" class="btn btn-success">View Appointments</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card appointment-card mb-4">
+                    <div class="card-body">
+                        <i class="bi bi-person display-4 text-info mb-3"></i>
+                        <h5 class="card-title">Manage Profile</h5>
+                        <p class="card-text">Update your personal information.</p>
+                        <a href="#" class="btn btn-info">Profile Settings</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 
